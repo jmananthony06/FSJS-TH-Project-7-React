@@ -82,8 +82,11 @@ function App() {
       </div>
         <Switch>
           <Route exact path="/">a</Route>
+          {/* when the path is the route with nothing after it, a is displayed  */}
           <Route exact path="/gallery/:topic"><Gallery photos={photos}/></Route>
+          {/* : followed by a word is a url parameter */}
           <Route exact path="/test">b</Route>
+          {/* when test is written after the slash, the letter b is displayed on the page under search bar */}
           <Route exact path="/topics/:topic"><Topic /></Route>
         </Switch>
       </Router>
@@ -91,6 +94,7 @@ function App() {
   );
 }
 
+// this function is hoisted into the code on line 90
 function Topic(props) {
   let { topic } = useParams();
   console.log(topic);

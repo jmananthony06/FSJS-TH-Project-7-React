@@ -14,7 +14,7 @@ function Photo(props) {
     <li>
       {props.photoObj.id}
       <br></br>
-      <img src={createFlickrURL(props.photoObj)}></img>{" "}
+      <img src={createFlickrURL(props.photoObj)}></img>
       {/* createFlickrURL consumes obj and returns URL string that delivers img */}
     </li>
   );

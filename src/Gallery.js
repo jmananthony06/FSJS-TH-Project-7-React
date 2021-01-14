@@ -9,7 +9,8 @@ import {useParams} from "react-router-dom";
 
 function Gallery(props) {
     const [photos, setPhotos] = useState([]);
-    let { topic } = useParams();
+    // let { topic } = useParams(); // creating var that destructures object 
+    let topic = useParams().topic;
     console.log(topic);
 
     function searchForPhotos(term) {
@@ -26,7 +27,7 @@ function Gallery(props) {
         });
       }
 
-      useEffect(() => { //lifecycle method for lack of better explanation. Used once or for when something changes
+      useEffect(() => { //lifecycle method for lack of better explanation. Used once or for when something changes. works when something happens. 
           searchForPhotos(topic);
         }, [topic]);
 
@@ -34,7 +35,7 @@ function Gallery(props) {
     <ul className = "photoList">
     {photos.map((item) => {
       // console.log(obj); // this test line returns the object in the console
-      return <Photo photoObj={item} />; // photo on line 40 is dumped into and mapped into the Photo component
+      return <Photo photoObj={item} />; // photo on line 40 is dumped into and mapped into the Photo component. photoObj is the prop of Photo component. 
     })}
   </ul>
   );
