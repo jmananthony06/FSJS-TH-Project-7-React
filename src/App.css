@@ -1,11 +1,102 @@
+body {
+  background-color: whitesmoke;
+}
+
 .photoList {
   text-align: center;
   /* background-color: red; */
 }
 
+.photoList li img {
+  box-shadow:
+  0 2px 2.5px rgba(0, 0, 0, 0.034),
+  0 6px 5px rgba(0, 0, 0, 0.048),
+  0 10px 10px rgba(0, 0, 0, 0.06),
+  0 10px 10px rgba(0, 0, 0, 0.072),
+  0 15.8px 15.4px rgba(0, 0, 0, 0.086),
+  0 15px 15px rgba(0, 0, 0, 0.12)
+;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.ImgSizeMobile {
+  height: 280px;
+  width: 280px;
+  border-radius: 3px;
+  border: 3px solid #282c34;
+}
+
+/*how do i get number text to become display: hidden;?
+display: hidden; isnt working*/
+
+.App input {
+  display: flex;
+  margin: auto;
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 3px solid #282c345d;
+  border-radius: 3px;
+  outline: none;
+}
+
+.App button {
+  display: flex;
+  margin: auto;
+  padding: 7px 20px;
+  border: none;
+  background-color: #282c34;
+  color: white;
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: .3px;
+  border-radius: 3px;
+}
+
+.App button:hover {
+  background-color: white;
+  color: #282c34;
+  outline: 3px solid #282c34;
+  transition: .2s;
+  border-radius: 3px;
+}
+
+.termArray {
+  width: 280px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.termArray a {
+  display: flex;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: 550;
+  text-decoration: none;
+  color: #282c34;
+  padding: 5px;
+  border: 3px solid #282c347b;
+  border-radius: 3px;
+  background-color: white;
+  color: #282c34;
+  width: 15%; /*exact width around each internal text isnt occuring*/
+  text-align: center; /*doesn't work??*/
+  box-shadow:
+  0 2px 2.5px rgba(0, 0, 0, 0.034),
+  0 4px 4px rgba(0, 0, 0, 0.048),
+  0 5px 5px rgba(0, 0, 0, 0.06),
+  0 5px 6px rgba(0, 0, 0, 0.072),
+  0 10px 10px rgba(0, 0, 0, 0.086),
+  0 10px 10px rgba(0, 0, 0, 0.12)
+;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -45,4 +136,38 @@ li {
 
 ul {
   padding: 0;
+}
+
+
+@media (min-width: 768px) {
+
+  .photoList {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .photoList li img {
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+  }
+
+  .App input {
+    width: 380px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .photoList li img {
+    width: 225px;
+    height: 225px;
+  }
+
+  .App input {
+    width: 550px;
+  }
 }

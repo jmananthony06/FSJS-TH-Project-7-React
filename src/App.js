@@ -72,7 +72,7 @@ function App() {
         setSearchTerm('');
       }}>Search</button>
       <Router>
-      <div>
+      <div className="termArray">
         {termArray.map((item) => {
           return <Link to ={`/gallery/${item}`}>{item}</Link>;
           // return <button onClick={function(e){
