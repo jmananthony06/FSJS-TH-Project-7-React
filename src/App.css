@@ -7,6 +7,7 @@ body {
   /* background-color: red; */
 }
 
+
 .photoList li img {
   box-shadow:
   0 2px 2.5px rgba(0, 0, 0, 0.034),
@@ -77,6 +78,7 @@ display: hidden; isnt working*/
 
 .termArray a {
   display: flex;
+  justify-content: center;
   margin: 10px auto;
   font-size: 18px;
   font-weight: 550;

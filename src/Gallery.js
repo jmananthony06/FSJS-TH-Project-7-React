@@ -23,7 +23,8 @@ function Gallery(props) {
           // console.log(response.data); tests response in console
           let data = JSON.parse(substr);
           // console.log(data); testing what data shows in console
-          setPhotos(data.photos.photo); // array of objects filled with key value pairs
+          setPhotos(data?.photos?.photo || []); // array of objects filled with key value pairs.
+          // .? makes sure data exists before going into the photos object and before going into the individual photo object. makes sure photos property is real and photo property is real. Makes sure what I'm trying to access is real.
         });
       }
 

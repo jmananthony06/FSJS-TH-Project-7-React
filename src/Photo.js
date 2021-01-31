@@ -12,7 +12,7 @@ function Photo(props) {
 
   return (
     <li>
-      {props.photoObj.id}
+      {/* {props.photoObj.id} -> used this line early on in making this project to make sure that a photo was being accessed. If un-commented, a group of numbers appears as an id over each individual image.*/}
       <br></br>
       <img class="ImgSizeMobile ImgSizeTablet ImgSizeDesktop" src={createFlickrURL(props.photoObj)}></img>
       {/* createFlickrURL consumes obj and returns URL string that delivers img */}
